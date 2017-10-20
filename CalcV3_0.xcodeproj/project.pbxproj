@@ -13,6 +13,12 @@
 		2561006D1F87844600C41C06 /* CalcV3_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2561006B1F87844600C41C06 /* CalcV3_0.xcdatamodeld */; };
 		2561006F1F87844600C41C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2561006E1F87844600C41C06 /* Assets.xcassets */; };
 		256100721F87844600C41C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256100701F87844600C41C06 /* LaunchScreen.storyboard */; };
+		2561007A1F87B51000C41C06 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256100791F87B51000C41C06 /* CalculatorBrain.swift */; };
+		2561007C1F87B5F400C41C06 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2561007B1F87B5F400C41C06 /* OutputViewController.swift */; };
+		2561007E1F87B75400C41C06 /* InputDigitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2561007D1F87B75400C41C06 /* InputDigitsViewController.swift */; };
+		256100821F87BE4300C41C06 /* DigitsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256100811F87BE4300C41C06 /* DigitsDelegate.swift */; };
+		258CF41E1F8E396700987E14 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258CF41D1F8E396700987E14 /* RoundedButton.swift */; };
+		258CF4201F8E50B300987E14 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258CF41F1F8E50B300987E14 /* RoundedLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		2561006E1F87844600C41C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		256100711F87844600C41C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		256100731F87844600C41C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		256100791F87B51000C41C06 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		2561007B1F87B5F400C41C06 /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
+		2561007D1F87B75400C41C06 /* InputDigitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDigitsViewController.swift; sourceTree = "<group>"; };
+		256100811F87BE4300C41C06 /* DigitsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsDelegate.swift; sourceTree = "<group>"; };
+		258CF41D1F8E396700987E14 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		258CF41F1F8E50B300987E14 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				256100641F87844600C41C06 /* AppDelegate.swift */,
+				258CF41F1F8E50B300987E14 /* RoundedLabel.swift */,
+				258CF41D1F8E396700987E14 /* RoundedButton.swift */,
 				256100661F87844600C41C06 /* ViewController.swift */,
 				256100681F87844600C41C06 /* Main.storyboard */,
 				2561006E1F87844600C41C06 /* Assets.xcassets */,
 				256100701F87844600C41C06 /* LaunchScreen.storyboard */,
 				256100731F87844600C41C06 /* Info.plist */,
 				2561006B1F87844600C41C06 /* CalcV3_0.xcdatamodeld */,
+				256100791F87B51000C41C06 /* CalculatorBrain.swift */,
+				2561007B1F87B5F400C41C06 /* OutputViewController.swift */,
+				2561007D1F87B75400C41C06 /* InputDigitsViewController.swift */,
+				256100811F87BE4300C41C06 /* DigitsDelegate.swift */,
 			);
 			path = CalcV3_0;
 			sourceTree = "<group>";
@@ -93,6 +111,9 @@
 		256100591F87844600C41C06 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Out1,
+				);
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = adminaccount;
@@ -139,8 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2561007C1F87B5F400C41C06 /* OutputViewController.swift in Sources */,
 				2561006D1F87844600C41C06 /* CalcV3_0.xcdatamodeld in Sources */,
+				258CF4201F8E50B300987E14 /* RoundedLabel.swift in Sources */,
 				256100671F87844600C41C06 /* ViewController.swift in Sources */,
+				258CF41E1F8E396700987E14 /* RoundedButton.swift in Sources */,
+				2561007E1F87B75400C41C06 /* InputDigitsViewController.swift in Sources */,
+				256100821F87BE4300C41C06 /* DigitsDelegate.swift in Sources */,
+				2561007A1F87B51000C41C06 /* CalculatorBrain.swift in Sources */,
 				256100651F87844600C41C06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
