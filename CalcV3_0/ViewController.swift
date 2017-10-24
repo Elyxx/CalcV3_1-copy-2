@@ -33,7 +33,7 @@ class ViewController: UIViewController, DigitsDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "ToNumbers") || (segue.identifier == "ToLeft") || (segue.identifier == "ToHidden") || (segue.identifier == "ToOperButtons") || (segue.identifier == "ToMidButtons"){
+        if (segue.identifier == "ToNumbers") || (segue.identifier == "ToLeft") || (segue.identifier == "ToHidden") || (segue.identifier == "ToOperButtons") || (segue.identifier == "ToMidButtons") || (segue.identifier == "ToMemory"){
             
             let inputViewController = segue.destination as? InputDigitsViewController
             inputViewController?.delegate = self
@@ -55,7 +55,6 @@ class ViewController: UIViewController, DigitsDelegate {
                     
                     let resultNumber = calculator.processing(input: customInput)
                     customInput = []
-                    
                     memory = memory + resultNumber
                     outputViewController?.checkMemory("M")
                     
@@ -63,12 +62,10 @@ class ViewController: UIViewController, DigitsDelegate {
                     if tmpLabel.hasSuffix(".0"){
                         tmpLabel.removeLast()
                         tmpLabel.removeLast()
-                        print(tmpLabel)
                     }
                     outputViewController?.display(tmpLabel)
                 }
             }
-            print("memo +")
         case "M-":
             if customInput[0] == ")" { bracketsCount = bracketsCount - 1 }
             if customInput.isEmpty == false  && bracketsCount == -1 {
@@ -84,18 +81,15 @@ class ViewController: UIViewController, DigitsDelegate {
                     if tmpLabel.hasSuffix(".0"){
                         tmpLabel.removeLast()
                         tmpLabel.removeLast()
-                        print(tmpLabel)
                     }
                     outputViewController?.display(tmpLabel)
                 }
             }
-            print("memo -")
         case "MR":
             tmpLabel = String(memory)
             if tmpLabel.hasSuffix(".0"){
                 tmpLabel.removeLast()
                 tmpLabel.removeLast()
-                print(tmpLabel)
             }
             outputViewController?.display(tmpLabel)
             
@@ -113,7 +107,6 @@ class ViewController: UIViewController, DigitsDelegate {
                 tmpLabel = symbol
                 outputViewController?.display(tmpLabel)
             }
-            print("readed")
         case "MS":
             if customInput[0] == ")" { bracketsCount = bracketsCount - 1 }
             if customInput.isEmpty == false  && bracketsCount == -1 {
@@ -129,7 +122,6 @@ class ViewController: UIViewController, DigitsDelegate {
                     if tmpLabel.hasSuffix(".0"){
                         tmpLabel.removeLast()
                         tmpLabel.removeLast()
-                        print(tmpLabel)
                     }
                     outputViewController?.display(tmpLabel)
                 }

@@ -27,7 +27,6 @@ class InputDigitsViewController: UIViewController{
     @IBAction func butPressed(_ sender: RoundedButton!) {
         makesound()
         sender.fade()
-        print(sender.currentTitle!)
         delegate?.refreshLabel(sender.currentTitle!)
     }
     
