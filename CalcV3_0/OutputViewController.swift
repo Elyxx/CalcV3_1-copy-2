@@ -14,6 +14,8 @@ class OutputViewController: UIViewController{
     
     @IBOutlet private weak var TypedStr: UILabel!
    
+    @IBOutlet private weak var memory: RoundedLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          // Do any additional setup after loading the view.
@@ -28,12 +30,15 @@ class OutputViewController: UIViewController{
         super.viewWillAppear(true)
         //TypedStr.adjustsFontForContentSizeCategory = true
     }
+    func checkMemory(_ result: String){
+        memory.text = result
+    }
     func display(_ result: String){
         let width = TypedStr.intrinsicContentSize.width
         if width > 338 {
             print("limit has been reached")
         }
-         //let w = TypedStr.widthAnchor        print(w)
+     
           TypedStr.text = result
     }
     

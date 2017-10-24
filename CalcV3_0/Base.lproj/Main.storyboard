@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,49 +15,56 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="mainView" customClass="ViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8D-8k-800" userLabel="OutPut">
-                                <rect key="frame" x="0.0" y="44" width="375" height="135.33333333333334"/>
+                                <rect key="frame" x="44" y="0.0" width="724" height="62.666666666666664"/>
                                 <color key="backgroundColor" red="1" green="0.7713434945579748" blue="0.64905395131081234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="Qcv-I8-2fX" kind="embed" identifier="ToOutPut" id="V2L-Ww-DCc"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-2A-1YB" userLabel="MidButt">
-                                <rect key="frame" x="0.0" y="179.33333333333331" width="375" height="122.33333333333331"/>
+                                <rect key="frame" x="354.33333333333326" y="62.666666666666671" width="413.66666666666674" height="59.000000000000014"/>
                                 <color key="backgroundColor" red="1" green="0.97896201308997599" blue="0.26581405741510356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="I5u-r7-Nqn" kind="embed" identifier="ToMidButtons" id="bkV-N9-kW4"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sks-9g-b0Z" userLabel="OperButt">
-                                <rect key="frame" x="281.33333333333326" y="301.66666666666674" width="93.666666666666686" height="476.33333333333326"/>
+                                <rect key="frame" x="664.66666666666652" y="121.66666666666666" width="103.33333333333337" height="232.33333333333334"/>
                                 <color key="backgroundColor" red="0.8528217905700588" green="1" blue="0.78996510547234144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="iGn-Tv-koR" kind="embed" identifier="ToOperButtons" id="6Au-jC-6tm"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUu-yb-pXA" userLabel="NumButt">
-                                <rect key="frame" x="0.0" y="301.66666666666674" width="281.33333333333331" height="476.33333333333326"/>
+                                <rect key="frame" x="354.33333333333337" y="121.66666666666666" width="310.33333333333337" height="232.33333333333334"/>
                                 <color key="backgroundColor" red="0.66847246655504977" green="1" blue="0.99649718540499521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="jhI-aR-VGR" kind="embed" identifier="ToNumbers" id="fhV-p9-WFC"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1f-ZE-Q79" userLabel="Hidden">
-                                <rect key="frame" x="0.0" y="179.33333333333331" width="0.0" height="598.66666666666674"/>
+                                <rect key="frame" x="250.99999999999997" y="62.666666666666657" width="103.33333333333329" height="291.33333333333337"/>
                                 <color key="backgroundColor" red="0.71986249617814169" green="0.57629704753798239" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="ICP-ga-Rnk" kind="embed" identifier="ToHidden" id="Dz9-lC-nqA"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAb-4L-bml" userLabel="LeftHid">
-                                <rect key="frame" x="0.0" y="179.33333333333331" width="0.0" height="598.66666666666674"/>
+                                <rect key="frame" x="147.33333333333337" y="62.666666666666657" width="103.66666666666666" height="291.33333333333337"/>
                                 <color key="backgroundColor" red="1" green="0.64673204942965212" blue="0.93191709111324672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="bet-RI-spN" kind="embed" identifier="ToLeft" id="blj-3F-Jtf"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C27-hG-Qca" userLabel="Memory">
+                                <rect key="frame" x="44" y="63" width="103" height="291"/>
+                                <color key="backgroundColor" red="0.78351558789999998" green="1" blue="0.65387982460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="H2G-xV-qkG" kind="embed" id="2Fh-cz-dAB"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -69,34 +76,40 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V1f-ZE-Q79" secondAttribute="bottom" id="4fi-mG-u0e"/>
                             <constraint firstItem="V1f-ZE-Q79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4mz-Ri-MgD"/>
                             <constraint firstItem="pAb-4L-bml" firstAttribute="trailing" secondItem="V1f-ZE-Q79" secondAttribute="leading" id="5OC-5c-FEe"/>
+                            <constraint firstItem="C27-hG-Qca" firstAttribute="top" secondItem="y8D-8k-800" secondAttribute="bottom" id="68V-Yl-3rS"/>
                             <constraint firstItem="y8D-8k-800" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Oh-Wh-AjG"/>
+                            <constraint firstItem="C27-hG-Qca" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:7" id="AMy-va-jjO"/>
                             <constraint firstItem="y8D-8k-800" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Afa-Cs-vHL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y8D-8k-800" secondAttribute="trailing" id="Ier-Ub-35O"/>
                             <constraint firstItem="sks-9g-b0Z" firstAttribute="top" secondItem="E9F-2A-1YB" secondAttribute="bottom" id="LQf-jx-7fy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="C27-hG-Qca" secondAttribute="leading" id="MN1-7z-AwI"/>
                             <constraint firstItem="V1f-ZE-Q79" firstAttribute="top" secondItem="y8D-8k-800" secondAttribute="bottom" id="WgM-tF-MHX"/>
                             <constraint firstItem="SUu-yb-pXA" firstAttribute="leading" secondItem="V1f-ZE-Q79" secondAttribute="trailing" id="X2b-QT-n08"/>
                             <constraint firstItem="E9F-2A-1YB" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:6" id="Ysj-M6-djJ"/>
                             <constraint firstItem="y8D-8k-800" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:6" id="aWy-wx-bLG"/>
                             <constraint firstItem="SUu-yb-pXA" firstAttribute="top" secondItem="E9F-2A-1YB" secondAttribute="bottom" id="crj-3v-GBr"/>
                             <constraint firstItem="pAb-4L-bml" firstAttribute="top" secondItem="y8D-8k-800" secondAttribute="bottom" id="efy-gA-opO"/>
-                            <constraint firstItem="pAb-4L-bml" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:6" id="ek2-OK-iFX"/>
+                            <constraint firstItem="pAb-4L-bml" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:7" id="ek2-OK-iFX"/>
                             <constraint firstItem="V1f-ZE-Q79" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fbv-Ms-n4z"/>
                             <constraint firstItem="E9F-2A-1YB" firstAttribute="leading" secondItem="V1f-ZE-Q79" secondAttribute="trailing" id="kQi-gB-EvS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sks-9g-b0Z" secondAttribute="bottom" id="qVw-FL-RKe"/>
-                            <constraint firstItem="pAb-4L-bml" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rL1-Ky-G1k"/>
+                            <constraint firstItem="pAb-4L-bml" firstAttribute="leading" secondItem="C27-hG-Qca" secondAttribute="trailing" id="rL1-Ky-G1k"/>
                             <constraint firstItem="SUu-yb-pXA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s5z-Z8-Vyp"/>
-                            <constraint firstItem="V1f-ZE-Q79" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:6" id="slW-P6-Wbo"/>
+                            <constraint firstItem="V1f-ZE-Q79" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:7" id="slW-P6-Wbo"/>
                             <constraint firstItem="SUu-yb-pXA" firstAttribute="trailing" secondItem="sks-9g-b0Z" secondAttribute="leading" id="taZ-vx-l5W"/>
+                            <constraint firstItem="C27-hG-Qca" firstAttribute="trailing" secondItem="pAb-4L-bml" secondAttribute="leading" id="vTj-ez-EVc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SUu-yb-pXA" secondAttribute="bottom" id="vkD-hG-AAW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sks-9g-b0Z" secondAttribute="trailing" id="vsa-CS-NkM"/>
-                            <constraint firstItem="sks-9g-b0Z" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:6" id="wIF-ne-mLO"/>
+                            <constraint firstItem="sks-9g-b0Z" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:7" id="wIF-ne-mLO"/>
                             <constraint firstItem="sks-9g-b0Z" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:4" id="xIe-5W-zKB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C27-hG-Qca" secondAttribute="bottom" id="ydS-ep-LUj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5OC-5c-FEe"/>
                                 <exclude reference="ek2-OK-iFX"/>
+                                <exclude reference="AMy-va-jjO"/>
                                 <exclude reference="4mz-Ri-MgD"/>
                                 <exclude reference="fbv-Ms-n4z"/>
                                 <exclude reference="slW-P6-Wbo"/>
@@ -110,6 +123,7 @@
                             <mask key="constraints">
                                 <include reference="5OC-5c-FEe"/>
                                 <include reference="ek2-OK-iFX"/>
+                                <include reference="AMy-va-jjO"/>
                                 <exclude reference="4mz-Ri-MgD"/>
                                 <exclude reference="fbv-Ms-n4z"/>
                                 <include reference="slW-P6-Wbo"/>
@@ -123,6 +137,7 @@
                             <mask key="constraints">
                                 <include reference="5OC-5c-FEe"/>
                                 <include reference="ek2-OK-iFX"/>
+                                <include reference="AMy-va-jjO"/>
                                 <include reference="slW-P6-Wbo"/>
                                 <include reference="X2b-QT-n08"/>
                                 <include reference="wIF-ne-mLO"/>
@@ -144,6 +159,7 @@
                             <mask key="constraints">
                                 <include reference="5OC-5c-FEe"/>
                                 <include reference="ek2-OK-iFX"/>
+                                <include reference="AMy-va-jjO"/>
                                 <exclude reference="4mz-Ri-MgD"/>
                                 <exclude reference="fbv-Ms-n4z"/>
                                 <include reference="slW-P6-Wbo"/>
@@ -164,13 +180,23 @@
             <objects>
                 <viewController id="Qcv-I8-2fX" userLabel="OutPut" customClass="OutputViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIz-ek-a5U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="135.33333333333334"/>
+                        <rect key="frame" x="0.0" y="0.0" width="724" height="62.666666666666664"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQB-Ja-FZ8" customClass="RoundedLabel" customModule="CalcV3_0" customModuleProvider="target">
-                                <rect key="frame" x="6" y="50" width="363" height="79.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQB-Ja-FZ8" userLabel="typedStr" customClass="RoundedLabel" customModule="CalcV3_0" customModuleProvider="target">
+                                <rect key="frame" x="50" y="6" width="624" height="50.666666666666664"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-Pr-tS2" userLabel="memory" customClass="RoundedLabel" customModule="CalcV3_0" customModuleProvider="target">
+                                <rect key="frame" x="50" y="6" width="50" height="50.666666666666664"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -181,33 +207,38 @@
                         <color key="backgroundColor" red="0.73653762574085824" green="0.64435469567796166" blue="0.78236040609137059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CQB-Ja-FZ8" firstAttribute="top" secondItem="le1-UH-6VB" secondAttribute="top" constant="6" id="C4k-Ew-pLu"/>
-                            <constraint firstItem="CQB-Ja-FZ8" firstAttribute="leading" secondItem="le1-UH-6VB" secondAttribute="leading" constant="6" id="G3L-5n-L7j"/>
+                            <constraint firstItem="uPg-Pr-tS2" firstAttribute="leading" secondItem="CQB-Ja-FZ8" secondAttribute="leading" id="RQK-3G-91y"/>
                             <constraint firstAttribute="bottom" secondItem="CQB-Ja-FZ8" secondAttribute="bottom" constant="6" id="So1-fs-zeR"/>
+                            <constraint firstItem="CQB-Ja-FZ8" firstAttribute="leading" secondItem="le1-UH-6VB" secondAttribute="leading" constant="6" id="Vny-kG-mrD"/>
+                            <constraint firstItem="CQB-Ja-FZ8" firstAttribute="bottom" secondItem="uPg-Pr-tS2" secondAttribute="bottom" id="fSY-us-k50"/>
+                            <constraint firstItem="CQB-Ja-FZ8" firstAttribute="leading" secondItem="uPg-Pr-tS2" secondAttribute="trailing" constant="-50" id="jxq-R5-zjH"/>
                             <constraint firstItem="le1-UH-6VB" firstAttribute="trailing" secondItem="CQB-Ja-FZ8" secondAttribute="trailing" constant="6" id="pBz-ab-7cr"/>
+                            <constraint firstItem="uPg-Pr-tS2" firstAttribute="top" secondItem="CQB-Ja-FZ8" secondAttribute="top" id="wzF-PT-9U1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="le1-UH-6VB"/>
                     </view>
                     <connections>
                         <outlet property="TypedStr" destination="CQB-Ja-FZ8" id="quD-dT-64M"/>
+                        <outlet property="memory" destination="uPg-Pr-tS2" id="y1W-oI-vrC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0x-4K-6ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="-524"/>
+            <point key="canvasLocation" x="1337" y="-1018"/>
         </scene>
         <!--MidButt-->
         <scene sceneID="lJG-du-QUL">
             <objects>
                 <viewController id="I5u-r7-Nqn" userLabel="MidButt" customClass="InputDigitsViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rCW-Y8-fIw" customClass="UIButton" customModule="CalcV3_0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="122.33333333333331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="413.66666666666674" height="59.000000000000014"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bvk-KX-bgW">
-                                <rect key="frame" x="3" y="43.999999999999993" width="369" height="75.333333333333314"/>
+                                <rect key="frame" x="3" y="0.0" width="407.66666666666669" height="56"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q65-n7-uau" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="75.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="56"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="c">
@@ -221,7 +252,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbs-RK-v4R" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="93" y="0.0" width="90" height="75.333333333333329"/>
+                                        <rect key="frame" x="102.66666666666666" y="0.0" width="99.666666666666657" height="56"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <state key="normal" title="(">
@@ -235,7 +266,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAC-YH-fyX" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="186" y="0.0" width="90" height="75.333333333333329"/>
+                                        <rect key="frame" x="205.33333333333337" y="0.0" width="99.666666666666629" height="56"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <state key="normal" title=")">
@@ -249,7 +280,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCc-0W-qqY" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="279" y="0.0" width="90" height="75.333333333333329"/>
+                                        <rect key="frame" x="308" y="0.0" width="99.666666666666686" height="56"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <state key="normal" title="&lt;-">
@@ -288,14 +319,14 @@
             <objects>
                 <viewController id="iGn-Tv-koR" userLabel="OperButt" customClass="InputDigitsViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yxX-dP-1x8">
-                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666686" height="476.33333333333326"/>
+                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333337" height="232.33333333333334"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="L3r-yQ-O8U">
-                                <rect key="frame" x="0.0" y="0.0" width="90.666666666666671" height="473.33333333333331"/>
+                                <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="229.33333333333334"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-R5-7GE" userLabel="+" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="90.666666666666671" height="116"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="55"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="+">
@@ -309,7 +340,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-JH-eNd" userLabel="-" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="119.00000000000001" width="90.666666666666671" height="116.33333333333336"/>
+                                        <rect key="frame" x="0.0" y="57.999999999999993" width="100.33333333333333" height="55.333333333333321"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                         <state key="normal" title="-">
@@ -323,7 +354,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrj-yy-aTk" userLabel="*" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="238.33333333333331" width="90.666666666666671" height="115.99999999999994"/>
+                                        <rect key="frame" x="0.0" y="116.33333333333334" width="100.33333333333333" height="55.000000000000028"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                         <state key="normal" title="*">
@@ -337,7 +368,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-A8-p6K" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="357.33333333333331" width="90.666666666666671" height="116"/>
+                                        <rect key="frame" x="0.0" y="174.33333333333334" width="100.33333333333333" height="55"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="/">
@@ -368,24 +399,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWO-9G-1PY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="1227"/>
+            <point key="canvasLocation" x="725" y="1188"/>
         </scene>
         <!--NumButt-->
         <scene sceneID="5BG-xi-g7W">
             <objects>
                 <viewController id="jhI-aR-VGR" userLabel="NumButt" customClass="InputDigitsViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v3R-Fs-38F">
-                        <rect key="frame" x="0.0" y="0.0" width="281.33333333333331" height="476.33333333333326"/>
+                        <rect key="frame" x="0.0" y="0.0" width="310.33333333333337" height="232.33333333333334"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qmc-mn-vv7">
-                                <rect key="frame" x="3" y="0.0" width="275.33333333333331" height="473.33333333333331"/>
+                                <rect key="frame" x="3" y="0.0" width="304.33333333333331" height="229.33333333333334"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CiK-7M-Siv">
-                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="473.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="229.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a84-Tt-pK8" userLabel="7" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="55"/>
                                                 <color key="backgroundColor" red="0.95840548345961485" green="1" blue="0.96880411259471111" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="7">
@@ -399,7 +430,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmT-mD-bLr" userLabel="4" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="119.00000000000001" width="89.666666666666671" height="116.33333333333336"/>
+                                                <rect key="frame" x="0.0" y="57.999999999999993" width="99.333333333333329" height="55.333333333333321"/>
                                                 <color key="backgroundColor" red="0.9486277010712405" green="1" blue="0.94745064591081807" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="4">
@@ -413,7 +444,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kk-ft-yc8" userLabel="1" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="238.33333333333331" width="89.666666666666671" height="115.99999999999994"/>
+                                                <rect key="frame" x="0.0" y="116.33333333333334" width="99.333333333333329" height="55.000000000000028"/>
                                                 <color key="backgroundColor" red="0.98308871050968261" green="1" blue="0.96226334263083479" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="1">
@@ -427,7 +458,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mST-Oh-QzG" userLabel="dot" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="357.33333333333331" width="89.666666666666671" height="116"/>
+                                                <rect key="frame" x="0.0" y="174.33333333333334" width="99.333333333333329" height="55"/>
                                                 <color key="backgroundColor" red="0.94509803921568625" green="1" blue="0.97876081091752243" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                                 <state key="normal" title=".">
@@ -443,10 +474,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="h8S-wR-DB4">
-                                        <rect key="frame" x="92.666666666666657" y="0.0" width="89.999999999999972" height="473.33333333333331"/>
+                                        <rect key="frame" x="102.33333333333331" y="0.0" width="99.666666666666686" height="229.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9U-BR-dtC" userLabel="8" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="89.999999999999986" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="55"/>
                                                 <color key="backgroundColor" red="0.93302737241757538" green="1" blue="0.96112042287999022" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="8">
@@ -460,7 +491,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcY-ae-Wgt" userLabel="5" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="119.00000000000001" width="89.999999999999986" height="116.33333333333336"/>
+                                                <rect key="frame" x="0.0" y="57.999999999999993" width="99.666666666666671" height="55.333333333333321"/>
                                                 <color key="backgroundColor" red="0.96824916319106602" green="1" blue="0.96575998932150797" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="5">
@@ -474,7 +505,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sir-cD-Bha" userLabel="2" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="238.33333333333331" width="89.999999999999986" height="115.99999999999994"/>
+                                                <rect key="frame" x="0.0" y="116.33333333333334" width="99.666666666666671" height="55.000000000000028"/>
                                                 <color key="backgroundColor" red="0.93463626524780596" green="1" blue="0.96390380063176717" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="2">
@@ -488,7 +519,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeS-fb-Xxp" userLabel="0" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="357.33333333333331" width="89.999999999999986" height="116"/>
+                                                <rect key="frame" x="0.0" y="174.33333333333334" width="99.666666666666671" height="55"/>
                                                 <color key="backgroundColor" red="0.97470231697974774" green="0.9927020524414607" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="0">
@@ -504,10 +535,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MSC-pS-AfK">
-                                        <rect key="frame" x="185.66666666666669" y="0.0" width="89.666666666666686" height="473.33333333333331"/>
+                                        <rect key="frame" x="205" y="0.0" width="99.333333333333314" height="229.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WK2-6U-bsE" userLabel="9" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666657" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99.333333333333314" height="55"/>
                                                 <color key="backgroundColor" red="0.92990852443777849" green="1" blue="0.95877604321010368" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="9">
@@ -521,7 +552,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNB-NU-YoL" userLabel="6" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="119.00000000000001" width="89.666666666666657" height="116.33333333333336"/>
+                                                <rect key="frame" x="0.0" y="57.999999999999993" width="99.333333333333314" height="55.333333333333321"/>
                                                 <color key="backgroundColor" red="0.96805522011276945" green="0.99872590482427159" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="6">
@@ -535,7 +566,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFH-Ta-9CU" userLabel="3" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="238.33333333333331" width="89.666666666666657" height="115.99999999999994"/>
+                                                <rect key="frame" x="0.0" y="116.33333333333334" width="99.333333333333314" height="55.000000000000028"/>
                                                 <color key="backgroundColor" red="0.94376308561347089" green="1" blue="0.98554206294884805" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="3">
@@ -549,7 +580,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x21-oP-AwE" userLabel="eql" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="357.33333333333331" width="89.666666666666657" height="116"/>
+                                                <rect key="frame" x="0.0" y="174.33333333333334" width="99.333333333333314" height="55"/>
                                                 <color key="backgroundColor" red="0.11228292762555904" green="0.1037068519176971" blue="0.1164736675131981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="=">
@@ -589,14 +620,14 @@
             <objects>
                 <viewController id="ICP-ga-Rnk" userLabel="Hidden" customClass="InputDigitsViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DUO-Gt-wC1">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="598.66666666666674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333329" height="291.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="lYE-QP-K6b">
-                                <rect key="frame" x="0.0" y="44" width="0.0" height="551.66666666666663"/>
+                                <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="288.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndu-hb-BMn" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="108"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="55.333333333333336"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="e">
@@ -610,7 +641,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XX1-rF-6Vs" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="111" width="0.0" height="108"/>
+                                        <rect key="frame" x="0.0" y="58.333333333333329" width="103.33333333333333" height="55.333333333333329"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="%">
@@ -624,7 +655,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBE-Vi-lnP" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="222.00000000000003" width="0.0" height="107.66666666666671"/>
+                                        <rect key="frame" x="0.0" y="116.66666666666666" width="103.33333333333333" height="54.999999999999972"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="!">
@@ -638,7 +669,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNp-wh-Xma" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="332.66666666666669" width="0.0" height="108"/>
+                                        <rect key="frame" x="0.0" y="174.66666666666663" width="103.33333333333333" height="55.333333333333343"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="^">
@@ -652,7 +683,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygE-Fa-bu0" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="443.66666666666663" width="0.0" height="107.99999999999989"/>
+                                        <rect key="frame" x="0.0" y="232.99999999999997" width="103.33333333333333" height="55.333333333333286"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="√">
@@ -680,21 +711,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKO-81-B1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549" y="998"/>
+            <point key="canvasLocation" x="594" y="1082"/>
         </scene>
         <!--LeftHid-->
         <scene sceneID="BtP-3R-9N3">
             <objects>
                 <viewController id="bet-RI-spN" userLabel="LeftHid" customClass="InputDigitsViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c3G-Rn-Njg">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="598.66666666666674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="103.66666666666666" height="291.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Oix-3z-awY">
-                                <rect key="frame" x="3" y="0.0" width="47.333333333333336" height="595.66666666666663"/>
+                                <rect key="frame" x="3" y="0.0" width="97.666666666666671" height="288.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiK-41-b2u" userLabel="pi" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="116.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="55.333333333333336"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="π">
@@ -708,7 +739,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofU-cS-U3A" userLabel="s" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="119.66666666666666" width="47.333333333333336" height="116.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="58.333333333333329" width="97.666666666666671" height="55.333333333333329"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="sin">
@@ -722,7 +753,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBP-Zo-rje" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="239.33333333333331" width="47.333333333333336" height="116.99999999999994"/>
+                                        <rect key="frame" x="0.0" y="116.66666666666666" width="97.666666666666671" height="54.999999999999972"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="cos">
@@ -736,7 +767,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLD-o1-JdP" userLabel="t" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="359.33333333333326" width="47.333333333333336" height="116.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="174.66666666666663" width="97.666666666666671" height="55.333333333333343"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="tg">
@@ -750,7 +781,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFy-mE-tDc" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="478.99999999999994" width="47.333333333333336" height="116.66666666666657"/>
+                                        <rect key="frame" x="0.0" y="232.99999999999997" width="97.666666666666671" height="55.333333333333286"/>
                                         <color key="backgroundColor" red="0.8972230537" green="0.82539061209999998" blue="0.91987230330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="log">
@@ -779,7 +810,104 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iu5-ob-mEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="999"/>
+            <point key="canvasLocation" x="385" y="1123"/>
+        </scene>
+        <!--Memory-->
+        <scene sceneID="exj-RN-stQ">
+            <objects>
+                <viewController id="H2G-xV-qkG" userLabel="Memory" customClass="InputDigitsViewController" customModule="CalcV3_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1c-wU-XOS">
+                        <rect key="frame" x="0.0" y="0.0" width="103" height="291"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="UF5-aa-4AA">
+                                <rect key="frame" x="3" y="0.0" width="100.33333333333333" height="288"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jve-nz-ale" userLabel="MS" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="55.333333333333336"/>
+                                        <color key="backgroundColor" red="0.73653762570000003" green="0.64435469570000004" blue="0.78236040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="MS">
+                                            <color key="titleColor" red="0.057900066015719343" green="0.053477707602542543" blue="0.060061072335025334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="butPressed:" destination="H2G-xV-qkG" eventType="touchUpInside" id="k3q-f8-g48"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeI-jT-Uhh" userLabel="MR" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58.333333333333329" width="100.33333333333333" height="54.999999999999986"/>
+                                        <color key="backgroundColor" red="0.73653762570000003" green="0.64435469570000004" blue="0.78236040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="MR">
+                                            <color key="titleColor" red="0.057900066015719343" green="0.053477707602542543" blue="0.060061072335025334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="butPressed:" destination="H2G-xV-qkG" eventType="touchUpInside" id="I9x-jf-eQQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX8-Ht-05z" userLabel="MC" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116.33333333333334" width="100.33333333333333" height="55.333333333333343"/>
+                                        <color key="backgroundColor" red="0.73653762570000003" green="0.64435469570000004" blue="0.78236040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="MC">
+                                            <color key="titleColor" red="0.057900066020000002" green="0.0534777076" blue="0.06006107234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="butPressed:" destination="H2G-xV-qkG" eventType="touchUpInside" id="5rE-Uw-MWi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-UI-vYB" userLabel="M+" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174.66666666666666" width="100.33333333333333" height="55"/>
+                                        <color key="backgroundColor" red="0.73653762570000003" green="0.64435469570000004" blue="0.78236040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="M+">
+                                            <color key="titleColor" red="0.057900066020000002" green="0.0534777076" blue="0.06006107234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="butPressed:" destination="H2G-xV-qkG" eventType="touchUpInside" id="RPZ-vI-vLF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNB-rS-Fea" userLabel="M-" customClass="RoundedButton" customModule="CalcV3_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="232.66666666666663" width="100.33333333333333" height="55.333333333333371"/>
+                                        <color key="backgroundColor" red="0.73653762570000003" green="0.64435469570000004" blue="0.78236040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="M-">
+                                            <color key="titleColor" red="0.057900066020000002" green="0.0534777076" blue="0.06006107234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="butPressed:" destination="H2G-xV-qkG" eventType="touchUpInside" id="PRe-3F-u55"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73653762570000003" green="0.64435469570000004" blue="0.78236040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UF5-aa-4AA" firstAttribute="width" secondItem="L1c-wU-XOS" secondAttribute="width" constant="-3" id="Ffv-Fp-0zA"/>
+                            <constraint firstAttribute="bottom" secondItem="UF5-aa-4AA" secondAttribute="bottom" constant="3" id="KHe-SJ-QcI"/>
+                            <constraint firstItem="UF5-aa-4AA" firstAttribute="leading" secondItem="L1c-wU-XOS" secondAttribute="leading" constant="3" id="Kly-g1-hbY"/>
+                            <constraint firstItem="UF5-aa-4AA" firstAttribute="top" secondItem="L1c-wU-XOS" secondAttribute="top" id="WsT-WD-hVo"/>
+                            <constraint firstAttribute="trailing" secondItem="UF5-aa-4AA" secondAttribute="trailing" id="ttT-3d-fbu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aF-qG-GJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

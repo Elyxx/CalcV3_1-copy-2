@@ -118,14 +118,16 @@ class CalcBrain: ProcessDelegate {
             return argument
         }
         var currentOperation = getNextItem()
+        //if currentOperation == "(" { getMiddleResult(argument: argument) }
+        
         if currentOperation == ")" {         return argument        }
         var argumentSecond = 0.0
         
         if initStack[0] == "(" {
             initStack.removeFirst()
-            while initStack.isEmpty == false && initStack[0] == "(" {
-                initStack.removeFirst()
-            }
+            
+            /*while initStack.isEmpty == false && initStack[0] == "(" {               initStack.removeFirst()           }*/
+            
             if initStack[0] == "-" {
                 initStack.removeFirst()
                   argumentSecond = getMiddleResult(argument: (-1)*Double(getNextItem())!)
@@ -146,7 +148,6 @@ class CalcBrain: ProcessDelegate {
         if initStack.isEmpty {
               return operationStack[currentOperation]!.operation(argument, argumentSecond)
         }
-        
         if initStack[0] == ")" {
             initStack.removeFirst()
             while initStack.isEmpty == false && initStack[0] == ")" {
@@ -188,8 +189,7 @@ func percentFunc(first:Double, second:Double)->Double{
 }
 func powerToFunc(first:Double, second:Double)->Double{
     if second == 0 { return 1 }
-    var result = Double(Int64.max)
-    result = first
+    var result = first
     var count  = second - 1
          while count>0{
                 result *= first

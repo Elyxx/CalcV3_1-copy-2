@@ -12,6 +12,7 @@ class ViewController: UIViewController, DigitsDelegate {
 
     var dotWasPressed = false
     var bracketsCount = -1
+    var memory = 0.0
     
     weak var delegate: ResultDelegate?
     var outputViewController:OutputViewController? = nil
@@ -42,20 +43,102 @@ class ViewController: UIViewController, DigitsDelegate {
         }
         
     }
-    
-    func refreshLabel(_ symbol: String) {
+    func getResult (){
         
+    }
+    func refreshLabel(_ symbol: String) {
         switch symbol{
         case "M+":
-            print("nan")
+            if customInput[0] == ")" { bracketsCount = bracketsCount - 1 }
+            if customInput.isEmpty == false  && bracketsCount == -1 {
+                if (customInput[0] == "0") || (customInput[0] == "1") || (customInput[0] == "2") || (customInput[0] == "3") || (customInput[0] == "4") || (customInput[0] == "5") || (customInput[0] == "6") || (customInput[0] == "7") || (customInput[0] == "8") || (customInput[0] == "9") || (customInput[0] == "!") || (customInput[0] == ")") || (customInput[0] == "π") || (customInput[0] == "e"){
+                    
+                    let resultNumber = calculator.processing(input: customInput)
+                    customInput = []
+                    
+                    memory = memory + resultNumber
+                    outputViewController?.checkMemory("M")
+                    
+                    tmpLabel = String(resultNumber)
+                    if tmpLabel.hasSuffix(".0"){
+                        tmpLabel.removeLast()
+                        tmpLabel.removeLast()
+                        print(tmpLabel)
+                    }
+                    outputViewController?.display(tmpLabel)
+                }
+            }
+            print("memo +")
         case "M-":
-            print("nan")
+            if customInput[0] == ")" { bracketsCount = bracketsCount - 1 }
+            if customInput.isEmpty == false  && bracketsCount == -1 {
+                if (customInput[0] == "0") || (customInput[0] == "1") || (customInput[0] == "2") || (customInput[0] == "3") || (customInput[0] == "4") || (customInput[0] == "5") || (customInput[0] == "6") || (customInput[0] == "7") || (customInput[0] == "8") || (customInput[0] == "9") || (customInput[0] == "!") || (customInput[0] == ")") || (customInput[0] == "π") || (customInput[0] == "e"){
+                    
+                    let resultNumber = calculator.processing(input: customInput)
+                    customInput = []
+                    
+                    memory = memory - resultNumber
+                    outputViewController?.checkMemory("M")
+                    
+                    tmpLabel = String(resultNumber)
+                    if tmpLabel.hasSuffix(".0"){
+                        tmpLabel.removeLast()
+                        tmpLabel.removeLast()
+                        print(tmpLabel)
+                    }
+                    outputViewController?.display(tmpLabel)
+                }
+            }
+            print("memo -")
         case "MR":
-            print("nan")
+            tmpLabel = String(memory)
+            if tmpLabel.hasSuffix(".0"){
+                tmpLabel.removeLast()
+                tmpLabel.removeLast()
+                print(tmpLabel)
+            }
+            outputViewController?.display(tmpLabel)
+            
+            switch symbol {
+            case "+", "-", "*", "/", "%", "^":
+                customInput.insert(tmpLabel, at: 0)
+                customInput.insert(symbol, at:0)
+                tmpLabel = tmpLabel + symbol
+                outputViewController?.display(tmpLabel)
+            case ")", ".":
+                tmpLabel = ""
+                outputViewController?.display("0")
+            default:
+                customInput.insert(symbol, at:0)
+                tmpLabel = symbol
+                outputViewController?.display(tmpLabel)
+            }
+            print("readed")
         case "MS":
-            print("nan")
+            if customInput[0] == ")" { bracketsCount = bracketsCount - 1 }
+            if customInput.isEmpty == false  && bracketsCount == -1 {
+                if (customInput[0] == "0") || (customInput[0] == "1") || (customInput[0] == "2") || (customInput[0] == "3") || (customInput[0] == "4") || (customInput[0] == "5") || (customInput[0] == "6") || (customInput[0] == "7") || (customInput[0] == "8") || (customInput[0] == "9") || (customInput[0] == "!") || (customInput[0] == ")") || (customInput[0] == "π") || (customInput[0] == "e"){
+                    
+                    let resultNumber = calculator.processing(input: customInput)
+                    customInput = []
+                    
+                    memory = resultNumber
+                    outputViewController?.checkMemory("M")
+                    
+                    tmpLabel = String(resultNumber)
+                    if tmpLabel.hasSuffix(".0"){
+                        tmpLabel.removeLast()
+                        tmpLabel.removeLast()
+                        print(tmpLabel)
+                    }
+                    outputViewController?.display(tmpLabel)
+                }
+            }
+            print("saved")
         case "MC":
-            print("nan")
+            memory = 0.0
+            outputViewController?.checkMemory("")
+            print("nan memory")
         case "c":
             bracketsCount = -1
             tmpLabel = ""
@@ -77,8 +160,6 @@ class ViewController: UIViewController, DigitsDelegate {
                         tmpLabel.removeLast()
                         print(tmpLabel)
                     }
-                    //else  tmpLabel = String(resultNumber) }
-                           
                     outputViewController?.display(tmpLabel)
                 }
             }
@@ -90,9 +171,8 @@ class ViewController: UIViewController, DigitsDelegate {
                     if (customInput[0] != "0")&&(customInput[0] != "0")&&(customInput[0] != "2")&&(customInput[0] != "3")&&(customInput[0] != "4")&&(customInput[0] != "5")&&(customInput[0] != "6")&&(customInput[0] != "7")&&(customInput[0] != "8")&&(customInput[0] != "9"){
                         dotWasPressed = true
                     }
-                    
+                    if (customInput[0] == ".") { dotWasPressed = false }
                     customInput.remove(at:0)
-                    //outputViewController?.display(tmpLabel)
                 }
                 
                 tmpLabel = ""
@@ -207,11 +287,6 @@ class ViewController: UIViewController, DigitsDelegate {
                         outputViewController?.display(tmpLabel)
                     }
                 default:
-                    /*if bracketsCount == 0 && symbol == ")" {
-                        tmpLabel = tmpLabel + symbol
-                        customInput.insert(symbol, at:0)
-                        outputViewController?.display(tmpLabel)
-                    }*/
                     if (bracketsCount > -1 || symbol != ")")&&(symbol != "sin")&&(symbol != "cos")&&(symbol != "tg")&&(symbol != "log")&&(symbol != "√")&&(symbol != "(")&&((symbol != ".")||(dotWasPressed==false)){
                         
                         tmpLabel = tmpLabel + symbol

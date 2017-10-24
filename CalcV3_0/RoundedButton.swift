@@ -24,7 +24,6 @@ class RoundedButton: UIButton {
         }
     }
     func fade(){
-        print("button")
         let fade = CASpringAnimation(keyPath: "transform.scale")
         fade.duration = 0.3
         fade.fromValue = 1.0

@@ -14,6 +14,7 @@ protocol DigitsDelegate:class{
 }
 protocol ResultDelegate:class{
     func display(_ result: String)
+    func checkMemory(_ result: String)
 }
 protocol ProcessDelegate:class{
     func processing(input: [String])->Double
