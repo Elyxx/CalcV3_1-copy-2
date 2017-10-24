@@ -57,7 +57,7 @@ class ViewController: UIViewController, DigitsDelegate {
         case "MC":
             print("nan")
         case "c":
-            bracketsCount = 0
+            bracketsCount = -1
             tmpLabel = ""
             customInput = []
             dotWasPressed = false
