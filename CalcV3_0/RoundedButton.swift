@@ -25,14 +25,16 @@ class RoundedButton: UIButton {
     }
     func fade(){
         print("button")
-        let fade = CABasicAnimation(keyPath: "opacity")
-        fade.duration = 0.2
-        fade.fromValue = 0.3
-        fade.toValue = 1
-        fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        let fade = CASpringAnimation(keyPath: "transform.scale")
+        fade.duration = 0.3
+        fade.fromValue = 1.0
+        fade.toValue = 0.99
+        //fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
         fade.autoreverses = true
         fade.repeatCount = 1
-        
+        fade.initialVelocity = 0.5
+        fade.damping = 0.95
         layer.add(fade, forKey: nil)
     }
     func updateCornerRadius() {

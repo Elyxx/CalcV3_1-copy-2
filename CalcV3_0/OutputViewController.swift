@@ -26,11 +26,14 @@ class OutputViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        //TypedStr.adjustsFontForContentSizeCategory = true
     }
     func display(_ result: String){
-          let width = TypedStr.intrinsicContentSize.width
-          print(width)
+        let width = TypedStr.intrinsicContentSize.width
+        if width > 338 {
+            print("limit has been reached")
+        }
+         //let w = TypedStr.widthAnchor        print(w)
           TypedStr.text = result
     }
     

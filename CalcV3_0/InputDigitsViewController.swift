@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import AVFoundation
 class InputDigitsViewController: UIViewController{
     
     weak var delegate: DigitsDelegate?
-    
+    var bracketsCount = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,12 +20,14 @@ class InputDigitsViewController: UIViewController{
     
     @IBOutlet weak var operationMinus: RoundedButton!
     
-    
+    private func makesound(){
+        AudioServicesPlaySystemSound(1114)
+    }
     
     @IBAction func butPressed(_ sender: RoundedButton!) {
+        makesound()
         sender.fade()
         delegate?.refreshLabel(sender.currentTitle!)
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
