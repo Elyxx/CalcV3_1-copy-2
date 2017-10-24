@@ -21,7 +21,7 @@ class InputDigitsViewController: UIViewController{
     @IBOutlet weak var operationMinus: RoundedButton!
     
     private func makesound(){
-        AudioServicesPlaySystemSound(1114)
+        AudioServicesPlaySystemSound(1105)
     }
     
     @IBAction func butPressed(_ sender: RoundedButton!) {

@@ -63,8 +63,8 @@ class ViewController: UIViewController, DigitsDelegate {
             dotWasPressed = false
             outputViewController?.display("0")
         case "=":
-            //if customInput[0] == ")" { bracketsCount = bracketsCount - 1 }
-            if customInput.isEmpty == false && bracketsCount == -1 {
+            if customInput[0] == ")" { bracketsCount = bracketsCount - 1 }
+            if customInput.isEmpty == false  && bracketsCount == -1 {
                 if (customInput[0] == "0") || (customInput[0] == "1") || (customInput[0] == "2") || (customInput[0] == "3") || (customInput[0] == "4") || (customInput[0] == "5") || (customInput[0] == "6") || (customInput[0] == "7") || (customInput[0] == "8") || (customInput[0] == "9") || (customInput[0] == "!") || (customInput[0] == ")") || (customInput[0] == "π") || (customInput[0] == "e"){
      
                     let resultNumber = calculator.processing(input: customInput)
@@ -183,7 +183,8 @@ class ViewController: UIViewController, DigitsDelegate {
                     }
                 case ")":
                     bracketsCount = bracketsCount - 1
-                    if (symbol == "-")||(symbol == "+")||(symbol == "/")||(symbol == "*")||(symbol == "%")||(symbol == "^")||(symbol == "!")||((symbol == ")")&&(bracketsCount > -1)){
+                    
+                    if (symbol == "-")||(symbol == "+")||(symbol == "/")||(symbol == "*")||(symbol == "%")||(symbol == "^")||(symbol == "!")||((symbol == ")")&&(bracketsCount > 0)){
                         
                         dotWasPressed = false
                         tmpLabel = tmpLabel + symbol
