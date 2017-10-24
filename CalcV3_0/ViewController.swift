@@ -77,7 +77,7 @@ class ViewController: UIViewController, DigitsDelegate {
                         tmpLabel.removeLast()
                         print(tmpLabel)
                     }
-                    tmpLabel = String(resultNumber)
+                    //else  tmpLabel = String(resultNumber) }
                            
                     outputViewController?.display(tmpLabel)
                 }
@@ -85,11 +85,12 @@ class ViewController: UIViewController, DigitsDelegate {
        case "<-":
                 if customInput.isEmpty {print("no-no")}
                 else {
+                    if customInput[0] == ")" { bracketsCount = bracketsCount + 1 }
+                    if customInput[0] == "(" { bracketsCount = bracketsCount - 1 }
                     if (customInput[0] != "0")&&(customInput[0] != "0")&&(customInput[0] != "2")&&(customInput[0] != "3")&&(customInput[0] != "4")&&(customInput[0] != "5")&&(customInput[0] != "6")&&(customInput[0] != "7")&&(customInput[0] != "8")&&(customInput[0] != "9"){
                         dotWasPressed = true
                     }
-                    if customInput[0] == ")" { bracketsCount = bracketsCount + 1 }
-                    if customInput[0] == "(" { bracketsCount = bracketsCount - 1 }
+                    
                     customInput.remove(at:0)
                     //outputViewController?.display(tmpLabel)
                 }
@@ -123,10 +124,12 @@ class ViewController: UIViewController, DigitsDelegate {
                     }
                 }
                 else{
-                    tmpLabel = tmpLabel + symbol
-                    customInput.insert(symbol, at:0)
-                    outputViewController?.display(tmpLabel)
-                    //if symbol == "(" {bracketsCount = bracketsCount + 1}
+                    if symbol != ")" {
+                        tmpLabel = tmpLabel + symbol
+                        customInput.insert(symbol, at:0)
+                        outputViewController?.display(tmpLabel)
+                        //if symbol == "(" {bracketsCount = bracketsCount + 1}
+                    }
                 }
             }
             else{
