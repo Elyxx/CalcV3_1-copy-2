@@ -42,17 +42,17 @@ class CalcBrain: ProcessDelegate {
          "tg": OperationStructure(priority:4, operation:trigTg),
          "log": OperationStructure(priority:4, operation:trigLog),
          "!": OperationStructure(priority:5, operation:factorial)]
-
+    
     init(){
-         //Operation.minus(value: "-", priopity: 1, operation: divisionFunc(first:second:))
+        //Operation.minus(value: "-", priopity: 1, operation: divisionFunc(first:second:))
     }
     func processing(input: [String])->Double{
         
-       if input.isEmpty {return 0}
-       initStack = []
+        if input.isEmpty {return 0}
+        initStack = []
         
-       for item in input{
-        
+        for item in input{
+            
             switch item{
             case "sin", "cos", "tg", "log", "√":
                 initStack.insert(item, at: 0)
@@ -65,7 +65,7 @@ class CalcBrain: ProcessDelegate {
             }
         }
         print("this is new stack")
-       
+        
         if initStack[0] == "-" {
             initStack.insert("0", at: 0)
         }
@@ -90,7 +90,7 @@ class CalcBrain: ProcessDelegate {
         case "*", "/", "+", "-", "%", "^", ")":
             return tmp
         case "sin", "cos", "tg", "log", "√":
-             return tmp
+            return tmp
         case "!":
             return tmp
         case "(":
@@ -118,19 +118,17 @@ class CalcBrain: ProcessDelegate {
             return argument
         }
         var currentOperation = getNextItem()
-        //if currentOperation == "(" { getMiddleResult(argument: argument) }
-        
         if currentOperation == ")" {         return argument        }
         var argumentSecond = 0.0
         
         if initStack[0] == "(" {
             initStack.removeFirst()
-            
-            /*while initStack.isEmpty == false && initStack[0] == "(" {               initStack.removeFirst()           }*/
-            
+            while initStack.isEmpty == false && initStack[0] == "(" {
+                initStack.removeFirst()
+            }
             if initStack[0] == "-" {
                 initStack.removeFirst()
-                  argumentSecond = getMiddleResult(argument: (-1)*Double(getNextItem())!)
+                argumentSecond = getMiddleResult(argument: (-1)*Double(getNextItem())!)
             }
             else {
                 argumentSecond = getMiddleResult(argument: Double(getNextItem())!)
@@ -138,15 +136,15 @@ class CalcBrain: ProcessDelegate {
         }
         else {
             if initStack[0] == "-" {
-                    initStack.removeFirst()
-                    argumentSecond = (-1) * Double(getNextItem())!
+                initStack.removeFirst()
+                argumentSecond = (-1) * Double(getNextItem())!
             }
             else {
                 argumentSecond = Double(getNextItem())!
             }
         }
         if initStack.isEmpty {
-              return operationStack[currentOperation]!.operation(argument, argumentSecond)
+            return operationStack[currentOperation]!.operation(argument, argumentSecond)
         }
         if initStack[0] == ")" {
             initStack.removeFirst()
@@ -191,10 +189,10 @@ func powerToFunc(first:Double, second:Double)->Double{
     if second == 0 { return 1 }
     var result = first
     var count  = second - 1
-         while count>0{
-                result *= first
-                count = count - 1
-            }
+    while count>0{
+        result *= first
+        count = count - 1
+    }
     if second < 0 {result = 1/result}
     return result
 }
@@ -226,11 +224,11 @@ func factorial(argument:Double, _ :Double)->Double{
     return result
 }
 /*
-enum Result<T> {
-    case Success(T)
-    case Failure(String)
-}
-*/
+ enum Result<T> {
+ case Success(T)
+ case Failure(String)
+ }
+ */
 ////////////
 
 struct OperationStructure{
@@ -246,12 +244,12 @@ enum ComputingError: Error{
 
 enum Operation {
     /*struct plus{
-        var value: String = "+"
-        var priopity: Int = 2
-        func additionFunc(first:Double, second:Double)->Double{
-            return first+second
-        }
-    }*/
+     var value: String = "+"
+     var priopity: Int = 2
+     func additionFunc(first:Double, second:Double)->Double{
+     return first+second
+     }
+     }*/
     case minus(
         value: String,
         priopity: Int,
@@ -277,7 +275,7 @@ enum Operation {
         priopity: Int,
         operation: (Double, Double)->Double
     )
- 
+    
 }
 
 
@@ -316,21 +314,22 @@ enum Constants: String {
 }
 
 /*
-// MARK: Protocols
-protocol InputInterface {
-    func symbolPressed(_ symbol: String)
-}
+ // MARK: Protocols
+ protocol InputInterface {
+ func symbolPressed(_ symbol: String)
+ }
+ 
+ protocol OutputInterface {
+ func display(_ result: String)
+ }
+ 
+ protocol CalculatorInterface {
+ func digit(_ value: Double)
+ func operation(_ operation: Operation)
+ func function(_ function: Function)
+ func memory(_ memory: Memory)
+ func utility(_ utility: Utility)
+ var resultClosure: ((Double?, Error?) -> Void) { get set }
+ }
+ */
 
-protocol OutputInterface {
-    func display(_ result: String)
-}
-
-protocol CalculatorInterface {
-    func digit(_ value: Double)
-    func operation(_ operation: Operation)
-    func function(_ function: Function)
-    func memory(_ memory: Memory)
-    func utility(_ utility: Utility)
-    var resultClosure: ((Double?, Error?) -> Void) { get set }
-}
-*/
